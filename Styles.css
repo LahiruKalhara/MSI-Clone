@@ -1,0 +1,66 @@
+*{margin: 0; padding: 0; font-family: poppins; list-style: none; text-decoration: none;}
+
+header{position: sticky; top: 0;  z-index: 9999; backdrop-filter: blur(20px); }
+header .headerContainer{display: flex; justify-content: space-between; align-items: center; padding: 0 2em;}
+header ul{display: flex; gap: 2.5em; font-weight: 600; margin-left: -27em; cursor: pointer;}
+header li{transition: 150ms ease-in-out; text-shadow: 0 0 10px #fff}
+header li:hover{color: orange;}
+header .logo{height: 4em;}
+header .icons{display: flex; gap: 1em; opacity: 50%;}
+header .icons img{width: 1em;}
+
+.bodyContainer1 img{width: 100%;}
+.bodyContainer1 div{background-color: rgb(212, 212, 212);}
+.bodyContainer1 ul{display: flex; justify-content: center; gap: 8em; font-weight: 500; padding: 1.2em 0; margin-top: -0.5em; cursor: pointer;}
+.bodyContainer1 ul li:hover{color: orange;}
+
+.bodyContainer2{text-align: center; margin-top: 3em;}
+.bodyContainer2 .cardContainer{display: grid; grid-template-columns: repeat(3,1fr); width: 97%; margin-left: auto; margin-right: auto;}
+.bodyContainer2 h1{margin-bottom: 0.7em;}
+.bodyContainer2 .cardContainer img{width: 94%; transition: 200ms ease-in-out; border-radius: 0.5em;}
+.bodyContainer2 .card{margin-bottom: 3em; cursor: pointer; transition: 300ms ease-in-out;}
+.bodyContainer2 .card img:hover{border-radius: 0em;}
+.bodyContainer2 .img2 img{width: 100%;}
+
+.bodyContainer3{background-color: aliceblue; text-align: center;}
+.bodyContainer3 h1{font-weight: 600; padding-top: 1em; margin-top: 1em;}
+.bodyContainer3 .cardContainer1 img{width: 18.63em;}
+.bodyContainer3 .cardGrid{display: flex; width: 95%; margin-left: auto; margin-right: auto; gap: 1em; margin-top: 1.3em;}
+.bodyContainer3 .cardContainer2{display: grid; grid-template-columns: repeat(3,1fr); gap: 1em;}
+.bodyContainer3 .cardContainer2 img{width: 100%;}
+.bodyContainer3 .cardContainer1 h3{font-size: 1rem; text-align: left;}
+.bodyContainer3 .cardContainer1 p{font-size: 0.9rem; text-align: left;}
+.bodyContainer3 .cardContainer2 h3{font-size: 1rem; text-align: left;}
+.bodyContainer3 .cardContainer2 p{font-size: 0.9rem; text-align: left;}
+
+.bodyContainer4{background-color: aliceblue; text-align: center; padding-top: 2.6em; height: 19em;}
+.bodyContainer4 h1{font-weight: 600; margin-bottom: 1em;}
+.bodyContainer4 .cardContainer{display: grid; grid-template-columns: repeat(7,1fr);}
+.bodyContainer4 .cardContainer img{width: 50%;}
+.bodyContainer4 .cardContainer h3{font-weight: 600; font-size: 0.9rem;}
+
+.bodyContainer5 {display: flex; gap: 1em; width: 100%; justify-content: center;}
+.bodyContainer5 img{width: 38em; margin-top: 3em;}
+
+footer table{width: 89%; margin-left: 9em; margin-right: auto; margin-top: 7em;}
+footer table th{text-align: left; opacity: 90%; cursor: pointer;}
+footer table  td{padding-top: 0.9em; font-size: 0.8rem; opacity: 60%; cursor: pointer;}
+footer table td:hover{color: orange;}
+
+
+.bodyContainer2{opacity: 0; filter: blur(5px); transform: translateY(10%); transition: all 1s;}
+.bodyContainer2.opacityon{opacity: 1; filter: blur(0); transform: translateY(0);}
+
+
+.bodyContainer3{opacity: 0; filter: blur(5px); transform: translateY(10%); transition: all 1s;}
+.bodyContainer3.opacityon{opacity: 1; filter: blur(0); transform: translateY(0);}
+
+
+.bodyContainer4{opacity: 0; filter: blur(5px); transform: translateY(10%); transition: all 1s;}
+.bodyContainer4.opacityon{opacity: 1; filter: blur(0); transform: translateY(0);}
+
+
+.bodyContainer5{opacity: 0; filter: blur(5px); transform: translateY(10%); transition: all 1s;}
+.bodyContainer5.opacityon{opacity: 1; filter: blur(0); transform: translateY(0);}
+
+
