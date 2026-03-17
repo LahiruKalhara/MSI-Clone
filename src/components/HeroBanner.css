@@ -3,7 +3,7 @@
 }
 
 .bodyContainer1 div {
-  background-color: rgb(212, 212, 212);
+  background-color: var(--bg-tertiary);
 }
 
 .bodyContainer1 ul {

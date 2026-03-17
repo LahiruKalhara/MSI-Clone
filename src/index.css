@@ -5,3 +5,26 @@
   list-style: none;
   text-decoration: none;
 }
+
+body {
+  --bg-primary: #ffffff;
+  --bg-secondary: aliceblue;
+  --bg-tertiary: rgb(212, 212, 212);
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --header-blur-bg: rgba(255, 255, 255, 0.7);
+  --icon-filter: none;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --header-blur-bg: rgba(18, 18, 18, 0.7);
+  --icon-filter: invert(1);
+}
