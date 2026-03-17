@@ -1,0 +1,21 @@
+.bodyContainer1 img {
+  width: 100%;
+}
+
+.bodyContainer1 div {
+  background-color: rgb(212, 212, 212);
+}
+
+.bodyContainer1 ul {
+  display: flex;
+  justify-content: center;
+  gap: 8em;
+  font-weight: 500;
+  padding: 1.2em 0;
+  margin-top: -0.5em;
+  cursor: pointer;
+}
+
+.bodyContainer1 ul li:hover {
+  color: orange;
+}

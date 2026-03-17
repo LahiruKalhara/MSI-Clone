@@ -1,0 +1,46 @@
+.bodyContainer2 {
+  text-align: center;
+  margin-top: 3em;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1s;
+}
+
+.bodyContainer2.opacityon {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.bodyContainer2 .cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bodyContainer2 h1 {
+  margin-bottom: 0.7em;
+}
+
+.bodyContainer2 .cardContainer img {
+  width: 94%;
+  transition: 200ms ease-in-out;
+  border-radius: 0.5em;
+}
+
+.bodyContainer2 .card {
+  margin-bottom: 3em;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.bodyContainer2 .card img:hover {
+  border-radius: 0em;
+}
+
+.bodyContainer2 .img2 img {
+  width: 100%;
+}

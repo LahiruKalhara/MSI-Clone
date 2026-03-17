@@ -1,0 +1,44 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  backdrop-filter: blur(20px);
+}
+
+header .headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+}
+
+header ul {
+  display: flex;
+  gap: 2.5em;
+  font-weight: 600;
+  margin-left: -27em;
+  cursor: pointer;
+}
+
+header li {
+  transition: 150ms ease-in-out;
+  text-shadow: 0 0 10px #fff;
+}
+
+header li:hover {
+  color: orange;
+}
+
+header .logo {
+  height: 4em;
+}
+
+header .icons {
+  display: flex;
+  gap: 1em;
+  opacity: 50%;
+}
+
+header .icons img {
+  width: 1em;
+}

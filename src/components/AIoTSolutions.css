@@ -1,0 +1,63 @@
+.bodyContainer3 {
+  background-color: aliceblue;
+  text-align: center;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(10%);
+  transition: all 1s;
+}
+
+.bodyContainer3.opacityon {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.bodyContainer3 h1 {
+  font-weight: 600;
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+.bodyContainer3 .cardContainer1 img {
+  width: 18.63em;
+}
+
+.bodyContainer3 .cardGrid {
+  display: flex;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1em;
+  margin-top: 1.3em;
+}
+
+.bodyContainer3 .cardContainer2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.bodyContainer3 .cardContainer2 img {
+  width: 100%;
+}
+
+.bodyContainer3 .cardContainer1 h3 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.bodyContainer3 .cardContainer1 p {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.bodyContainer3 .cardContainer2 h3 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.bodyContainer3 .cardContainer2 p {
+  font-size: 0.9rem;
+  text-align: left;
+}
