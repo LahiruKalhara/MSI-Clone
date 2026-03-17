@@ -30,6 +30,11 @@ header li:hover {
   color: orange;
 }
 
+header li a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header .logo {
   height: 4em;
   filter: var(--icon-filter);

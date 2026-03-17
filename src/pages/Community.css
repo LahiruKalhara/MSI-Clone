@@ -1,0 +1,258 @@
+.communityPage {
+  min-height: 100vh;
+}
+
+.communityHero {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.communityHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: gray;
+}
+
+.communityHero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.communityPrograms {
+  padding: 3em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.programsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.programCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 250ms ease;
+}
+
+.programCard:hover {
+  transform: translateY(-4px);
+}
+
+.programCard img {
+  width: 100%;
+  display: block;
+}
+
+.programCard h3 {
+  padding: 1em 1.2em 0.3em;
+  font-size: 1.1rem;
+}
+
+.programCard p {
+  padding: 0 1.2em 1.2em;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.communityForums {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.communityForums h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.forumsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.forumCard {
+  background-color: var(--bg-primary);
+  border-radius: 0.8em;
+  padding: 1.5em;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.forumCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.forumCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4em;
+}
+
+.forumCard p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.forumStats {
+  display: flex;
+  gap: 1.5em;
+}
+
+.forumStats span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: orange;
+}
+
+.communityFeatured {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.communityFeatured h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuredCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 250ms ease;
+}
+
+.featuredCard:hover {
+  transform: translateY(-5px);
+}
+
+.featuredImgWrap {
+  overflow: hidden;
+}
+
+.featuredImgWrap img {
+  width: 100%;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.featuredCard:hover .featuredImgWrap img {
+  transform: scale(1.05);
+}
+
+.featuredInfo {
+  padding: 1.2em;
+  text-align: left;
+}
+
+.featuredAuthor {
+  font-size: 0.8rem;
+  color: orange;
+  font-weight: 600;
+}
+
+.featuredInfo h3 {
+  font-size: 1rem;
+  margin: 0.4em 0;
+}
+
+.featuredMeta {
+  display: flex;
+  gap: 1.5em;
+}
+
+.featuredMeta span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.communityEvents {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.communityEvents h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.eventsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eventCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  background-color: var(--bg-primary);
+  border-radius: 0.8em;
+  padding: 1.2em 1.5em;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.eventCard:hover {
+  transform: translateX(5px);
+}
+
+.eventDate {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: orange;
+  min-width: 70px;
+}
+
+.eventDetails {
+  flex: 1;
+  text-align: left;
+}
+
+.eventDetails h3 {
+  font-size: 1rem;
+}
+
+.eventDetails p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.eventStatus {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: orange;
+  color: #fff;
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+  white-space: nowrap;
+}

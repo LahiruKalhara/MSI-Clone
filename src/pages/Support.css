@@ -1,0 +1,202 @@
+.supportPage {
+  min-height: 100vh;
+}
+
+.supportHero {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.supportHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: gray;
+}
+
+.supportHero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5em;
+}
+
+.searchBox {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.searchBox input {
+  flex: 1;
+  padding: 0.8em 1.2em;
+  border: 2px solid var(--bg-tertiary);
+  border-right: none;
+  border-radius: 0.5em 0 0 0.5em;
+  font-size: 0.95rem;
+  font-family: poppins;
+  outline: none;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 200ms ease;
+}
+
+.searchBox input:focus {
+  border-color: orange;
+}
+
+.searchBox button {
+  padding: 0.8em 1.5em;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 0 0.5em 0.5em 0;
+  font-size: 0.95rem;
+  font-family: poppins;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.searchBox button:hover {
+  background-color: #e07b00;
+}
+
+.quickLinksSection {
+  padding: 3em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quickLinksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
+}
+
+.quickLinkCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  padding: 2em 1.5em;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.quickLinkCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quickLinkIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.quickLinkCard h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4em;
+}
+
+.quickLinkCard p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.faqSection {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.faqSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faqItem {
+  background-color: var(--bg-primary);
+  border-radius: 0.5em;
+  margin-bottom: 0.8em;
+  overflow: hidden;
+}
+
+.faqItem summary {
+  padding: 1em 1.5em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.faqItem summary:hover {
+  color: orange;
+}
+
+.faqItem p {
+  padding: 0 1.5em 1.2em;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.serviceSection {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.serviceSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.serviceGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  padding: 2em;
+  min-width: 250px;
+  text-align: center;
+  transition: transform 200ms ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+}
+
+.serviceCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+.servicePhone {
+  font-size: 1rem;
+  font-weight: 600;
+  color: orange;
+  margin-bottom: 0.3em;
+}
+
+.serviceHours {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
