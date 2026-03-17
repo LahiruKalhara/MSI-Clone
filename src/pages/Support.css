@@ -169,6 +169,7 @@
   gap: 2em;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .serviceCard {
@@ -199,4 +200,90 @@
 .serviceHours {
   font-size: 0.8rem;
   color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .supportHero h1 {
+    font-size: 3rem;
+  }
+
+  .faqSection h2,
+  .serviceSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .quickLinksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .supportHero {
+    padding: 2.5em 1em;
+  }
+
+  .supportHero h1 {
+    font-size: 2rem;
+  }
+
+  .supportHero p {
+    font-size: 0.9rem;
+  }
+
+  .faqSection h2,
+  .serviceSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+
+  .searchBox {
+    max-width: 100%;
+    margin: 0 1em;
+  }
+
+  .searchBox input {
+    font-size: 0.85rem;
+  }
+
+  .searchBox button {
+    font-size: 0.85rem;
+    padding: 0.8em 1em;
+  }
+
+  .quickLinksSection {
+    padding: 2em 1em;
+  }
+
+  .quickLinksGrid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .faqSection {
+    padding: 2em 1em;
+  }
+
+  .faqItem summary {
+    font-size: 0.85rem;
+    padding: 0.8em 1em;
+  }
+
+  .faqItem p {
+    padding: 0 1em 1em;
+    font-size: 0.8rem;
+  }
+
+  .serviceSection {
+    padding: 2em 1em;
+  }
+
+  .serviceGrid {
+    gap: 1em;
+  }
+
+  .serviceCard {
+    min-width: auto;
+    width: 100%;
+    padding: 1.5em;
+  }
 }

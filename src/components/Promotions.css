@@ -19,3 +19,22 @@
   width: 38em;
   margin-top: 3em;
 }
+
+@media (max-width: 1024px) {
+  .bodyContainer5 img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bodyContainer5 {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .bodyContainer5 img {
+    width: 92%;
+    margin-top: 1.5em;
+  }
+}

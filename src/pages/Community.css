@@ -256,3 +256,88 @@
   border-radius: 1em;
   white-space: nowrap;
 }
+
+@media (max-width: 1024px) {
+  .communityHero h1 {
+    font-size: 3rem;
+  }
+
+  .communityForums h2,
+  .communityFeatured h2,
+  .communityEvents h2 {
+    font-size: 2.5rem;
+  }
+
+  .featuredGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .communityHero {
+    padding: 2.5em 1em;
+  }
+
+  .communityHero h1 {
+    font-size: 2rem;
+  }
+
+  .communityHero p {
+    font-size: 0.9rem;
+  }
+
+  .communityForums h2,
+  .communityFeatured h2,
+  .communityEvents h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+
+  .communityPrograms {
+    padding: 2em 1em;
+  }
+
+  .programsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .communityForums {
+    padding: 2em 1em;
+  }
+
+  .forumsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .communityFeatured {
+    padding: 2em 1em;
+  }
+
+  .featuredGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .communityEvents {
+    padding: 2em 1em;
+  }
+
+  .eventCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    padding: 1em;
+  }
+
+  .eventCard:hover {
+    transform: translateY(-3px);
+  }
+
+  .eventDate {
+    font-size: 0.9rem;
+  }
+
+  .eventDetails h3 {
+    font-size: 0.9rem;
+  }
+}
