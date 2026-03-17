@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import addUser from '../assets/add-user.png'
 import searchIcon from '../assets/search-interface-symbol.png'
@@ -7,13 +8,15 @@ export default function Header({ darkMode, onToggle }) {
   return (
     <header>
       <div className="headerContainer">
-        <img className="logo" src={logo} alt="MSI Logo" />
+        <Link to="/">
+          <img className="logo" src={logo} alt="MSI Logo" />
+        </Link>
         <ul>
-          <li>Products</li>
-          <li>AIoT Solutions</li>
-          <li>Community</li>
-          <li>What's New</li>
-          <li>Support</li>
+          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/aiot-solutions">AIoT Solutions</Link></li>
+          <li><Link to="/community">Community</Link></li>
+          <li><Link to="/whats-new">What's New</Link></li>
+          <li><Link to="/support">Support</Link></li>
         </ul>
         <div className="headerRight">
           <button className="themeToggle" onClick={onToggle} aria-label="Toggle dark mode">

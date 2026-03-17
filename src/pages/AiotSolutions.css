@@ -1,0 +1,184 @@
+.aiotPage {
+  min-height: 100vh;
+}
+
+.aiotHero {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.aiotHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: gray;
+}
+
+.aiotHero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.aiotOverview {
+  padding: 3em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overviewContent {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+}
+
+.overviewText {
+  flex: 1;
+}
+
+.overviewText h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  color: gray;
+}
+
+.overviewText p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2em;
+}
+
+.overviewText ul {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+
+.overviewText li {
+  padding: 0.3em 0;
+  color: var(--text-secondary);
+  list-style: disc;
+}
+
+.overviewImg {
+  flex: 1;
+}
+
+.overviewImg img {
+  width: 100%;
+  border-radius: 0.8em;
+}
+
+.aiotSolutions {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.aiotSolutions h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutionCard {
+  background-color: var(--bg-primary);
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.solutionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.solutionImgWrap {
+  overflow: hidden;
+}
+
+.solutionImgWrap img {
+  width: 100%;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.solutionCard:hover .solutionImgWrap img {
+  transform: scale(1.05);
+}
+
+.solutionInfo {
+  padding: 1.2em;
+  text-align: left;
+}
+
+.solutionInfo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+
+.solutionInfo p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.aiotPartners {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.aiotPartners h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.partnersGrid {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partnerCard {
+  text-align: center;
+  padding: 2em;
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  min-width: 200px;
+  transition: transform 200ms ease;
+}
+
+.partnerCard:hover {
+  transform: translateY(-4px);
+}
+
+.partnerCard img {
+  width: 60px;
+  margin-bottom: 1em;
+}
+
+.partnerCard h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.partnerCard p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.3em;
+}

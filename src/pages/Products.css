@@ -1,0 +1,131 @@
+.productsPage {
+  min-height: 100vh;
+}
+
+.productsHero {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.productsHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: gray;
+}
+
+.productsHero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.productsSection {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.productsSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.productImgWrap {
+  overflow: hidden;
+}
+
+.productImgWrap img {
+  width: 100%;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.productCard:hover .productImgWrap img {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  padding: 1.2em;
+  text-align: left;
+}
+
+.productInfo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+.productInfo p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.6em;
+}
+
+.productPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: orange;
+}
+
+.categoriesSection {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.categoriesSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoryCard {
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-4px);
+}
+
+.categoryCard img {
+  width: 50%;
+}
+
+.categoryCard h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5em;
+}

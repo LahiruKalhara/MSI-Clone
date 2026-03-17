@@ -1,0 +1,201 @@
+.whatsNewPage {
+  min-height: 100vh;
+}
+
+.whatsNewHero {
+  background-color: var(--bg-secondary);
+  text-align: center;
+  padding: 4em 2em;
+}
+
+.whatsNewHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: gray;
+}
+
+.whatsNewHero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.heroArticle {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 2em;
+}
+
+.heroArticleCard {
+  position: relative;
+  border-radius: 1em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.heroArticleCard img {
+  width: 100%;
+  display: block;
+}
+
+.heroArticleOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: #fff;
+}
+
+.heroArticleOverlay h2 {
+  font-size: 1.5rem;
+  margin: 0.5em 0 0.3em;
+}
+
+.heroArticleOverlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.articleTag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: orange;
+  color: #fff;
+  padding: 0.3em 0.7em;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+}
+
+.articleDate {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.heroArticleOverlay .articleDate {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-top: 0.5em;
+}
+
+.articlesSection {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.articlesSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.articleCard {
+  background-color: var(--bg-secondary);
+  border-radius: 0.8em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.articleImgWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.articleImgWrap img {
+  width: 100%;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.articleCard:hover .articleImgWrap img {
+  transform: scale(1.05);
+}
+
+.articleImgWrap .articleTag {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.articleInfo {
+  padding: 1.2em;
+  text-align: left;
+}
+
+.articleInfo h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.4em 0;
+  line-height: 1.3;
+}
+
+.articleInfo p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.pressSection {
+  background-color: var(--bg-secondary);
+  padding: 3em 2em;
+  text-align: center;
+}
+
+.pressSection h2 {
+  font-size: 3.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.pressList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pressItem {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1.2em 1.5em;
+  border-bottom: 1px solid var(--bg-tertiary);
+  cursor: pointer;
+  transition: background-color 200ms ease;
+  text-align: left;
+}
+
+.pressItem:hover {
+  background-color: var(--bg-primary);
+}
+
+.pressDate {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: orange;
+  min-width: 110px;
+}
+
+.pressItem h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+}

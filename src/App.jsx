@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import HeroBanner from './components/HeroBanner'
-import LatestInnovation from './components/LatestInnovation'
-import AIoTSolutions from './components/AIoTSolutions'
-import SmartSolutions from './components/SmartSolutions'
-import Promotions from './components/Promotions'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import AiotSolutions from './pages/AiotSolutions'
+import Community from './pages/Community'
+import WhatsNew from './pages/WhatsNew'
+import Support from './pages/Support'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -15,14 +16,16 @@ export default function App() {
   }, [darkMode])
 
   return (
-    <>
+    <BrowserRouter>
       <Header darkMode={darkMode} onToggle={() => setDarkMode(!darkMode)} />
-      <HeroBanner />
-      <LatestInnovation />
-      <AIoTSolutions />
-      <SmartSolutions />
-      <Promotions />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/aiot-solutions" element={<AiotSolutions />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/whats-new" element={<WhatsNew />} />
+        <Route path="/support" element={<Support />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
