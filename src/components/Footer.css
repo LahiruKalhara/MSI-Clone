@@ -1,0 +1,23 @@
+footer table {
+  width: 89%;
+  margin-left: 9em;
+  margin-right: auto;
+  margin-top: 7em;
+}
+
+footer table th {
+  text-align: left;
+  opacity: 90%;
+  cursor: pointer;
+}
+
+footer table td {
+  padding-top: 0.9em;
+  font-size: 0.8rem;
+  opacity: 60%;
+  cursor: pointer;
+}
+
+footer table td:hover {
+  color: orange;
+}
