@@ -152,6 +152,7 @@
   gap: 3em;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .partnerCard {
@@ -181,4 +182,73 @@
   font-size: 0.85rem;
   color: var(--text-secondary);
   margin-top: 0.3em;
+}
+
+@media (max-width: 1024px) {
+  .aiotHero h1 {
+    font-size: 3rem;
+  }
+
+  .overviewText h2,
+  .aiotSolutions h2,
+  .aiotPartners h2 {
+    font-size: 2.5rem;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .overviewContent {
+    gap: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .aiotHero {
+    padding: 2.5em 1em;
+  }
+
+  .aiotHero h1 {
+    font-size: 2rem;
+  }
+
+  .aiotHero p {
+    font-size: 0.9rem;
+  }
+
+  .overviewText h2,
+  .aiotSolutions h2,
+  .aiotPartners h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+
+  .overviewContent {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .aiotOverview {
+    padding: 2em 1em;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .aiotSolutions,
+  .aiotPartners {
+    padding: 2em 1em;
+  }
+
+  .partnersGrid {
+    gap: 1em;
+  }
+
+  .partnerCard {
+    min-width: 140px;
+    padding: 1.5em 1em;
+  }
 }

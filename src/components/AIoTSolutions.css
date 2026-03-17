@@ -61,3 +61,45 @@
   font-size: 0.9rem;
   text-align: left;
 }
+
+@media (max-width: 1024px) {
+  .bodyContainer3 h1 {
+    font-size: 2rem;
+  }
+
+  .bodyContainer3 .cardGrid {
+    flex-direction: column;
+  }
+
+  .bodyContainer3 .cardContainer1 img {
+    width: 100%;
+  }
+
+  .bodyContainer3 .cardContainer2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bodyContainer3 h1 {
+    font-size: 1.5rem;
+  }
+
+  .bodyContainer3 .cardGrid {
+    width: 92%;
+  }
+
+  .bodyContainer3 .cardContainer2 {
+    grid-template-columns: 1fr;
+  }
+
+  .bodyContainer3 .cardContainer1 h3,
+  .bodyContainer3 .cardContainer2 h3 {
+    font-size: 0.9rem;
+  }
+
+  .bodyContainer3 .cardContainer1 p,
+  .bodyContainer3 .cardContainer2 p {
+    font-size: 0.8rem;
+  }
+}

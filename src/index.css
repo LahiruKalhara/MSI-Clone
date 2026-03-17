@@ -4,6 +4,16 @@
   font-family: poppins;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
