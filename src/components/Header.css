@@ -3,6 +3,7 @@ header {
   top: 0;
   z-index: 9999;
   backdrop-filter: blur(20px);
+  background-color: var(--header-blur-bg);
 }
 
 header .headerContainer {
@@ -22,7 +23,7 @@ header ul {
 
 header li {
   transition: 150ms ease-in-out;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 10px var(--bg-primary);
 }
 
 header li:hover {
@@ -31,6 +32,13 @@ header li:hover {
 
 header .logo {
   height: 4em;
+  filter: var(--icon-filter);
+}
+
+header .headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 header .icons {
@@ -41,4 +49,24 @@ header .icons {
 
 header .icons img {
   width: 1em;
+  filter: var(--icon-filter);
+}
+
+.themeToggle {
+  background: none;
+  border: 2px solid var(--text-secondary);
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 200ms ease-in-out;
+}
+
+.themeToggle:hover {
+  border-color: orange;
+  transform: scale(1.1);
 }

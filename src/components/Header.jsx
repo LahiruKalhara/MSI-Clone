@@ -3,7 +3,7 @@ import addUser from '../assets/add-user.png'
 import searchIcon from '../assets/search-interface-symbol.png'
 import './Header.css'
 
-export default function Header() {
+export default function Header({ darkMode, onToggle }) {
   return (
     <header>
       <div className="headerContainer">
@@ -15,9 +15,14 @@ export default function Header() {
           <li>What's New</li>
           <li>Support</li>
         </ul>
-        <div className="icons">
-          <img src={addUser} alt="User" />
-          <img src={searchIcon} alt="Search" />
+        <div className="headerRight">
+          <button className="themeToggle" onClick={onToggle} aria-label="Toggle dark mode">
+            {darkMode ? '\u2600\uFE0F' : '\uD83C\uDF19'}
+          </button>
+          <div className="icons">
+            <img src={addUser} alt="User" />
+            <img src={searchIcon} alt="Search" />
+          </div>
         </div>
       </div>
     </header>
