@@ -28,9 +28,9 @@ export default function Support() {
   return (
     <div className="supportPage">
       <div className="supportHero">
-        <h1>Support</h1>
-        <p>We're here to help you get the most out of your MSI products</p>
-        <div className="searchBox">
+        <h1 data-aos="fade-down">Support</h1>
+        <p data-aos="fade-up" data-aos-delay="100">We're here to help you get the most out of your MSI products</p>
+        <div className="searchBox" data-aos="fade-up" data-aos-delay="200">
           <input type="text" placeholder="Search by product name or serial number..." />
           <button>Search</button>
         </div>
@@ -39,7 +39,7 @@ export default function Support() {
       <section className="quickLinksSection">
         <div className="quickLinksGrid">
           {quickLinks.map((link, i) => (
-            <div className="quickLinkCard" key={i}>
+            <div className="quickLinkCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <span className="quickLinkIcon">{link.icon}</span>
               <h3>{link.title}</h3>
               <p>{link.desc}</p>
@@ -49,10 +49,10 @@ export default function Support() {
       </section>
 
       <section className="faqSection">
-        <h2>Frequently Asked Questions</h2>
+        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
         <div className="faqList">
           {faqs.map((faq, i) => (
-            <details className="faqItem" key={i}>
+            <details className="faqItem" key={i} data-aos="fade-up" data-aos-delay={i * 80}>
               <summary>{faq.q}</summary>
               <p>{faq.a}</p>
             </details>
@@ -61,10 +61,10 @@ export default function Support() {
       </section>
 
       <section className="serviceSection">
-        <h2>Service Centers</h2>
+        <h2 data-aos="fade-up">Service Centers</h2>
         <div className="serviceGrid">
           {serviceLocations.map((loc, i) => (
-            <div className="serviceCard" key={i}>
+            <div className="serviceCard" key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
               <h3>{loc.region}</h3>
               <p className="servicePhone">{loc.phone}</p>
               <p className="serviceHours">{loc.hours}</p>

@@ -1,4 +1,3 @@
-import useScrollAnimation from '../hooks/useScrollAnimation'
 import cardddd from '../assets/cardddd.jpeg'
 import c1 from '../assets/c1.jpeg'
 import c2 from '../assets/c2.jpeg'
@@ -11,13 +10,11 @@ import './AIoTSolutions.css'
 const amrCards = [c1, c2, c3, c4, c5, c6]
 
 export default function AIoTSolutions() {
-  const [ref, isVisible] = useScrollAnimation()
-
   return (
-    <div ref={ref} className={`bodyContainer3${isVisible ? ' opacityon' : ''}`}>
+    <div className="bodyContainer3" data-aos="fade-up">
       <h1>Empower Your Business with AIoT Solutions</h1>
       <div className="cardGrid">
-        <div className="cardContainer1">
+        <div className="cardContainer1" data-aos="fade-right" data-aos-delay="100">
           <div className="card">
             <img src={cardddd} alt="EV Charging Solutions" />
             <h3>EV Charging Solutions</h3>
@@ -26,7 +23,7 @@ export default function AIoTSolutions() {
         </div>
         <div className="cardContainer2">
           {amrCards.map((img, i) => (
-            <div className="card" key={i}>
+            <div className="card" key={i} data-aos="fade-up" data-aos-delay={i * 80}>
               <img src={img} alt={`AMR ${i + 1}`} />
               <h3>Autonomous Mobile Robot (AMR)</h3>
               <p>AI, Automation and Robotics</p>

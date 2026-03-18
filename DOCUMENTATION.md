@@ -7,7 +7,7 @@ A clone of the MSI (Micro-Star International) official website built as a learni
 ## Current Status
 
 **Status:** In Development
-**Last Updated:** March 17, 2026
+**Last Updated:** March 18, 2026
 **Branch:** danushika
 
 ### Completed Features
@@ -17,7 +17,7 @@ A clone of the MSI (Micro-Star International) official website built as a learni
 - [x] Client-side routing with React Router v7
 - [x] Dark mode / Light mode toggle with CSS variables
 - [x] Scroll-based reveal animations using Intersection Observer
-- [x] 6 fully built pages (Home, Products, AIoT Solutions, Community, What's New, Support)
+- [x] 7 fully built pages (Home, Products, AIoT Solutions, Community, What's New, Support, Future Trends)
 - [x] Sticky header with navigation links
 - [x] Gray colored headings with increased font sizes across all pages
 
@@ -41,6 +41,7 @@ A clone of the MSI (Micro-Star International) official website built as a learni
 | React            | ^18.3.1  | UI library                  |
 | React DOM        | ^18.3.1  | DOM rendering               |
 | React Router DOM | ^7.13.1  | Client-side routing         |
+| Lucide React     | ^0.577.0 | Icon library                |
 | Vite             | ^6.0.0   | Build tool & dev server     |
 | @vitejs/plugin-react | ^4.3.4 | React support for Vite   |
 
@@ -89,7 +90,8 @@ MSI-Clone/
         ├── AiotSolutions.jsx / .css  # EV charging, industry solutions, partners
         ├── Community.jsx / .css      # Forums, featured posts, events
         ├── WhatsNew.jsx / .css       # News articles, press releases
-        └── Support.jsx / .css        # Search, FAQ, service centers
+        ├── Support.jsx / .css        # Search, FAQ, service centers
+        └── FutureTrends.jsx / .css   # Future trends in MIS with interactive cards
 ```
 
 ---
@@ -104,6 +106,7 @@ MSI-Clone/
 | `/community`      | Community        | Forums, featured posts, events calendar  |
 | `/whats-new`      | WhatsNew         | News articles & press releases           |
 | `/support`        | Support          | Search, FAQ accordion, service centers   |
+| `/future-trends`  | FutureTrends     | 10 future MIS trends, timeline, global distribution |
 
 ---
 
@@ -122,6 +125,16 @@ MSI-Clone/
 - Sections fade in with blur-to-clear + slide-up transition when scrolled into view
 - One-time animation (unobserves after triggering)
 - Applied to: LatestInnovation, AIoTSolutions, SmartSolutions, Promotions on the Home page
+
+### Future Trends Page
+
+- Hero section with animated image grid and badge
+- Stats bar highlighting key metrics (10 trends, 2026+, AI Powered, 360° Integration)
+- 10 interactive trend cards with expand/collapse on click, each featuring:
+  - Lucide icon, image, title, description, and technology tags
+- Animated 3D globe with global distribution info across 4 regions (Americas, Europe, Asia Pacific, MEA)
+- Evolution roadmap timeline (2024–2027+)
+- Uses `lucide-react` icons: BotMessageSquare, Hand, Cog, Radio, Puzzle, Target, Brain, Link, Globe, Landmark
 
 ### Heading Styles
 
