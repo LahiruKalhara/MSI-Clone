@@ -30,18 +30,18 @@ export default function Community() {
   return (
     <div className="communityPage">
       <div className="communityHero">
-        <h1>MSI Community</h1>
-        <p>Connect with gamers, creators, and tech enthusiasts worldwide</p>
+        <h1 data-aos="fade-down">MSI Community</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Connect with gamers, creators, and tech enthusiasts worldwide</p>
       </div>
 
       <section className="communityPrograms">
         <div className="programsGrid">
-          <div className="programCard">
+          <div className="programCard" data-aos="fade-right">
             <img src={reward} alt="MSI Reward Program" />
             <h3>MSI Reward Program</h3>
             <p>Earn points with every purchase and redeem exclusive rewards.</p>
           </div>
-          <div className="programCard">
+          <div className="programCard" data-aos="fade-left" data-aos-delay="100">
             <img src={insider} alt="MSI Insider" />
             <h3>MSI Insider</h3>
             <p>Get early access to products, beta software, and exclusive content.</p>
@@ -50,10 +50,10 @@ export default function Community() {
       </section>
 
       <section className="communityForums">
-        <h2>Forums</h2>
+        <h2 data-aos="fade-up">Forums</h2>
         <div className="forumsGrid">
           {forums.map((forum, i) => (
-            <div className="forumCard" key={i}>
+            <div className="forumCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <h3>{forum.title}</h3>
               <p>{forum.desc}</p>
               <div className="forumStats">
@@ -66,10 +66,10 @@ export default function Community() {
       </section>
 
       <section className="communityFeatured">
-        <h2>Featured Posts</h2>
+        <h2 data-aos="fade-up">Featured Posts</h2>
         <div className="featuredGrid">
           {featuredPosts.map((post, i) => (
-            <div className="featuredCard" key={i}>
+            <div className="featuredCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="featuredImgWrap">
                 <img src={post.img} alt={post.title} />
               </div>
@@ -87,10 +87,10 @@ export default function Community() {
       </section>
 
       <section className="communityEvents">
-        <h2>Upcoming Events</h2>
+        <h2 data-aos="fade-up">Upcoming Events</h2>
         <div className="eventsGrid">
           {events.map((event, i) => (
-            <div className="eventCard" key={i}>
+            <div className="eventCard" key={i} data-aos="fade-left" data-aos-delay={i * 100}>
               <div className="eventDate">{event.date}</div>
               <div className="eventDetails">
                 <h3>{event.title}</h3>

@@ -199,3 +199,89 @@
   font-size: 0.95rem;
   font-weight: 500;
 }
+
+@media (max-width: 1024px) {
+  .whatsNewHero h1 {
+    font-size: 3rem;
+  }
+
+  .articlesSection h2,
+  .pressSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .articlesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroArticleOverlay h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsNewHero {
+    padding: 2.5em 1em;
+  }
+
+  .whatsNewHero h1 {
+    font-size: 2rem;
+  }
+
+  .whatsNewHero p {
+    font-size: 0.9rem;
+  }
+
+  .articlesSection h2,
+  .pressSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+  }
+
+  .heroArticle {
+    padding: 0 1em;
+    margin: 1em auto;
+  }
+
+  .heroArticleOverlay {
+    padding: 1em;
+  }
+
+  .heroArticleOverlay h2 {
+    font-size: 1rem;
+  }
+
+  .heroArticleOverlay p {
+    font-size: 0.75rem;
+    display: none;
+  }
+
+  .articlesSection {
+    padding: 2em 1em;
+  }
+
+  .articlesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .pressSection {
+    padding: 2em 1em;
+  }
+
+  .pressItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+    padding: 1em;
+  }
+
+  .pressDate {
+    min-width: auto;
+    font-size: 0.8rem;
+  }
+
+  .pressItem h3 {
+    font-size: 0.85rem;
+  }
+}

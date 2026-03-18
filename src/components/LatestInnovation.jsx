@@ -1,4 +1,4 @@
-import useScrollAnimation from '../hooks/useScrollAnimation'
+import { Link } from 'react-router-dom'
 import card1 from '../assets/card1.jpeg'
 import card2 from '../assets/card2.jpeg'
 import card3 from '../assets/card3.jpeg'
@@ -8,26 +8,31 @@ import card6 from '../assets/card6.jpeg'
 import dss from '../assets/dss.jpeg'
 import './LatestInnovation.css'
 
-const cards = [card1, card2, card3, card4, card5, card6]
+const cards = [
+  { img: card1, name: 'Creator A16 AI Copilot + PC', desc: 'Next-Level AI PC' },
+  { img: card2, name: 'Stealth 18 AI Studio', desc: 'Ultimate Creator Laptop' },
+  { img: card3, name: 'Titan 18 HX', desc: 'Extreme Gaming Power' },
+  { img: card4, name: 'Prestige 16 AI Evo', desc: 'Business & Productivity' },
+  { img: card5, name: 'Raider GE78 HX', desc: 'Gaming Domination' },
+  { img: card6, name: 'Summit E16 Flip Evo', desc: 'Versatile 2-in-1' },
+]
 
 export default function LatestInnovation() {
-  const [ref, isVisible] = useScrollAnimation()
-
   return (
-    <div ref={ref} className={`bodyContainer2${isVisible ? ' opacityon' : ''}`}>
+    <div className="bodyContainer2" data-aos="fade-up">
       <h1>Discover the Latest MSI Innovation</h1>
       <div className="cardContainer">
-        {cards.map((img, i) => (
-          <div className="card" key={i}>
-            <img src={img} alt={`Card ${i + 1}`} />
-            <h3>Creator A16 AI Copilot + PC</h3>
-            <p>Next-Level AI PC</p>
-          </div>
+        {cards.map((card, i) => (
+          <Link to="/products" className="card" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+            <img src={card.img} alt={card.name} />
+            <h3>{card.name}</h3>
+            <p>{card.desc}</p>
+          </Link>
         ))}
       </div>
-      <div className="img2">
+      <Link to="/products" className="img2" data-aos="zoom-in" data-aos-delay="200">
         <img src={dss} alt="MSI Showcase" />
-      </div>
+      </Link>
     </div>
   )
 }

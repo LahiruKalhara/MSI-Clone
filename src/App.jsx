@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Products from './pages/Products'
@@ -7,9 +9,14 @@ import AiotSolutions from './pages/AiotSolutions'
 import Community from './pages/Community'
 import WhatsNew from './pages/WhatsNew'
 import Support from './pages/Support'
+import FutureTrends from './pages/FutureTrends'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, easing: 'ease-out' })
+  }, [])
 
   useEffect(() => {
     document.body.classList.toggle('dark', darkMode)
@@ -25,6 +32,7 @@ export default function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/future-trends" element={<FutureTrends />} />
       </Routes>
     </BrowserRouter>
   )

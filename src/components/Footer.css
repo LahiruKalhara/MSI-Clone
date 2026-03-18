@@ -1,23 +1,257 @@
-footer table {
-  width: 89%;
-  margin-left: 9em;
-  margin-right: auto;
-  margin-top: 7em;
+footer {
+  border-top: 1px solid var(--bg-tertiary);
+  margin-top: 4em;
 }
 
-footer table th {
-  text-align: left;
-  opacity: 90%;
+.footerContainer {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3em 2em;
+  gap: 0;
+}
+
+.footerDivider {
+  width: 1px;
+  background-color: var(--bg-tertiary);
+  margin: 0 2em;
+  flex-shrink: 0;
+}
+
+/* Categories column */
+.footerCategories {
+  min-width: 260px;
+  flex-shrink: 0;
+}
+
+.footerCatItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9em 0;
   cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color 200ms ease;
+  border-bottom: 1px solid var(--bg-tertiary);
 }
 
-footer table td {
-  padding-top: 0.9em;
+.footerCatItem:first-child {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.footerCatItem.active {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.footerCatItem:hover {
+  color: var(--text-primary);
+}
+
+.catArrow {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  transition: transform 200ms ease;
+}
+
+.footerCatItem:hover .catArrow {
+  transform: translateX(3px);
+}
+
+/* Series column */
+.footerSeries {
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.footerSeries h4,
+.footerExplore h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2em;
+}
+
+.footerSeries ul,
+.footerExplore ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.footerSeries li,
+.footerExplore li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.footerSeries li:hover,
+.footerExplore li:hover {
+  color: var(--text-primary);
+}
+
+/* Explore column */
+.footerExplore {
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+/* Featured product */
+.footerFeatured {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerFeatured img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+.footerFeatured h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.footerFeatured p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footerContainer {
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 1.5em;
+  }
+
+  .footerDivider {
+    display: none;
+  }
+
+  .footerCategories {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .footerSeries,
+  .footerExplore {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .footerFeatured {
+    width: 100%;
+  }
+}
+
+/* Footer bottom */
+.footerBottom {
+  border-top: 1px solid var(--bg-tertiary);
+  padding: 2em 2em 2.5em;
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  transition: transform 200ms ease, background-color 200ms ease, color 200ms ease;
+}
+
+.socialIcons a:hover {
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.socialIcons a:nth-child(1):hover {
+  background-color: #1877f2;
+}
+
+.socialIcons a:nth-child(2):hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+}
+
+.socialIcons a:nth-child(3):hover {
+  background-color: #0a66c2;
+}
+
+.socialIcons a:nth-child(4):hover {
+  background-color: #000;
+}
+
+.socialIcons a:nth-child(5):hover {
+  background-color: #ff4500;
+}
+
+.socialIcons svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footerCopyright {
   font-size: 0.8rem;
-  opacity: 60%;
-  cursor: pointer;
+  color: var(--text-secondary);
+  opacity: 0.7;
 }
 
-footer table td:hover {
-  color: orange;
+/* Mobile */
+@media (max-width: 768px) {
+  footer {
+    margin-top: 2em;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 2em;
+  }
+
+  .footerCategories {
+    width: 100%;
+  }
+
+  .footerCatItem {
+    padding: 0.7em 0;
+    font-size: 0.9rem;
+  }
+
+  .footerCatItem:first-child {
+    font-size: 1rem;
+  }
+
+  .footerSeries,
+  .footerExplore {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .footerFeatured img {
+    max-width: 220px;
+  }
 }

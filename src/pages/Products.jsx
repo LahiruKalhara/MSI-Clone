@@ -37,15 +37,15 @@ export default function Products() {
   return (
     <div className="productsPage">
       <div className="productsHero">
-        <h1>Our Products</h1>
-        <p>Explore MSI's lineup of laptops, desktops, and smart solutions</p>
+        <h1 data-aos="fade-down">Our Products</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Explore MSI's lineup of laptops, desktops, and smart solutions</p>
       </div>
 
       <section className="productsSection">
-        <h2>Featured Products</h2>
+        <h2 data-aos="fade-up">Featured Products</h2>
         <div className="productsGrid">
           {featuredProducts.map((product, i) => (
-            <div className="productCard" key={i}>
+            <div className="productCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="productImgWrap">
                 <img src={product.img} alt={product.name} />
               </div>
@@ -60,10 +60,10 @@ export default function Products() {
       </section>
 
       <section className="categoriesSection">
-        <h2>Product Categories</h2>
+        <h2 data-aos="fade-up">Product Categories</h2>
         <div className="categoriesGrid">
           {categories.map((cat, i) => (
-            <div className="categoryCard" key={i}>
+            <div className="categoryCard" key={i} data-aos="zoom-in" data-aos-delay={i * 80}>
               <img src={cat.img} alt={cat.name} />
               <h3>{cat.name}</h3>
             </div>

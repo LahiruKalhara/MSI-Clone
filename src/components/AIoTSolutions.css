@@ -1,16 +1,6 @@
 .bodyContainer3 {
   background-color: var(--bg-secondary);
   text-align: center;
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(10%);
-  transition: all 1s;
-}
-
-.bodyContainer3.opacityon {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
 }
 
 .bodyContainer3 h1 {
@@ -60,4 +50,46 @@
 .bodyContainer3 .cardContainer2 p {
   font-size: 0.9rem;
   text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .bodyContainer3 h1 {
+    font-size: 2rem;
+  }
+
+  .bodyContainer3 .cardGrid {
+    flex-direction: column;
+  }
+
+  .bodyContainer3 .cardContainer1 img {
+    width: 100%;
+  }
+
+  .bodyContainer3 .cardContainer2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bodyContainer3 h1 {
+    font-size: 1.5rem;
+  }
+
+  .bodyContainer3 .cardGrid {
+    width: 92%;
+  }
+
+  .bodyContainer3 .cardContainer2 {
+    grid-template-columns: 1fr;
+  }
+
+  .bodyContainer3 .cardContainer1 h3,
+  .bodyContainer3 .cardContainer2 h3 {
+    font-size: 0.9rem;
+  }
+
+  .bodyContainer3 .cardContainer1 p,
+  .bodyContainer3 .cardContainer2 p {
+    font-size: 0.8rem;
+  }
 }

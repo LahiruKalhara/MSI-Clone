@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(tree:*)",
+      "Bash(npm install:*)",
+      "Bash(npx vite:*)",
+      "Bash(ls:*)",
+      "Bash(cp \"C:/Users/Danu/Downloads/MSI Business/59-earth \\(1\\)/textures/earth albedo.jpg\" \"E:/projects- learning/MSI-Clone/public/textures/earth-albedo.jpg\")",
+      "Bash(cp \"C:/Users/Danu/Downloads/MSI Business/59-earth \\(1\\)/textures/earth bump.jpg\" \"E:/projects- learning/MSI-Clone/public/textures/earth-bump.jpg\")",
+      "Bash(cp \"C:/Users/Danu/Downloads/MSI Business/59-earth \\(1\\)/textures/clouds earth.png\" \"E:/projects- learning/MSI-Clone/public/textures/earth-clouds.png\")",
+      "Bash(cp \"C:/Users/Danu/Downloads/MSI Business/59-earth \\(1\\)/textures/earth night_lights_modified.png\" \"E:/projects- learning/MSI-Clone/public/textures/earth-night.png\")",
+      "Bash(cp \"C:/Users/Danu/Downloads/MSI Business/59-earth \\(1\\)/textures/earth land ocean mask.png\" \"E:/projects- learning/MSI-Clone/public/textures/earth-specular.png\")"
     ]
   }
 }

@@ -30,13 +30,13 @@ export default function AiotSolutions() {
   return (
     <div className="aiotPage">
       <div className="aiotHero">
-        <h1>AIoT Solutions</h1>
-        <p>Empower your business with AI-powered IoT solutions for every industry</p>
+        <h1 data-aos="fade-down">AIoT Solutions</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Empower your business with AI-powered IoT solutions for every industry</p>
       </div>
 
       <section className="aiotOverview">
         <div className="overviewContent">
-          <div className="overviewText">
+          <div className="overviewText" data-aos="fade-right">
             <h2>EV Charging Solutions</h2>
             <p>MSI's smart EV charging solutions combine cutting-edge hardware with intelligent software to deliver reliable, efficient, and scalable charging infrastructure for businesses and homes.</p>
             <ul>
@@ -46,17 +46,17 @@ export default function AiotSolutions() {
               <li>Compatible with all major EV standards</li>
             </ul>
           </div>
-          <div className="overviewImg">
+          <div className="overviewImg" data-aos="fade-left" data-aos-delay="200">
             <img src={cardddd} alt="EV Charging Solutions" />
           </div>
         </div>
       </section>
 
       <section className="aiotSolutions">
-        <h2>Industry Solutions</h2>
+        <h2 data-aos="fade-up">Industry Solutions</h2>
         <div className="solutionsGrid">
           {solutions.map((sol, i) => (
-            <div className="solutionCard" key={i}>
+            <div className="solutionCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="solutionImgWrap">
                 <img src={sol.img} alt={sol.name} />
               </div>
@@ -70,10 +70,10 @@ export default function AiotSolutions() {
       </section>
 
       <section className="aiotPartners">
-        <h2>Technology Partners</h2>
+        <h2 data-aos="fade-up">Technology Partners</h2>
         <div className="partnersGrid">
           {partners.map((p, i) => (
-            <div className="partnerCard" key={i}>
+            <div className="partnerCard" key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
               <img src={p.img} alt={p.name} />
               <h3>{p.name}</h3>
               <p>{p.role}</p>
