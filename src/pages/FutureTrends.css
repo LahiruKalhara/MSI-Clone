@@ -1,0 +1,481 @@
+.futurePage {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.futureHero {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 40%, #0f3460 70%, #1a1a2e 100%);
+  padding: 5em 3em 4em;
+  display: flex;
+  align-items: center;
+  gap: 4em;
+  overflow: hidden;
+  position: relative;
+}
+
+.futureHero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.futureHeroContent {
+  flex: 1;
+  z-index: 1;
+}
+
+.futureBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e07b00, #ff9a3c);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4em 1em;
+  border-radius: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2em;
+}
+
+.futureHero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 0.5em;
+}
+
+.futureHero p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.futureHeroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+  flex: 0.8;
+  z-index: 1;
+}
+
+.heroGridItem {
+  border-radius: 0.8em;
+  overflow: hidden;
+  animation: fadeSlideUp 0.6s ease both;
+}
+
+.heroGridItem img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.heroGridItem:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats Bar */
+.futureStats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 2.5em 2em;
+  background-color: var(--bg-secondary);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #e07b00, #ff9a3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--bg-tertiary);
+}
+
+/* Trends Grid Section */
+.trendsSection {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.trendsSection h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+  color: gray;
+}
+
+.trendsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trendCard {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-radius: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  text-align: left;
+}
+
+.trendCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.trendImgWrap {
+  position: relative;
+  width: 200px;
+  min-height: 200px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.trendImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.trendCard:hover .trendImgWrap img {
+  transform: scale(1.08);
+}
+
+.trendNumber {
+  position: absolute;
+  bottom: 0.6em;
+  right: 0.6em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.25em 0.6em;
+  border-radius: 0.4em;
+  letter-spacing: 0.1em;
+  backdrop-filter: blur(4px);
+}
+
+.trendInfo {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trendTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.trendIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0.5em;
+  background: linear-gradient(135deg, #0f3460, #1a1a3e);
+  color: #ff9a3c;
+  flex-shrink: 0;
+}
+
+body.dark .trendIcon {
+  background: linear-gradient(135deg, #2a2a4e, #1a1a3e);
+  color: #ff9a3c;
+}
+
+.trendInfo h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+body.dark .trendInfo h3 {
+  color: #e8e8e8;
+}
+
+.trendInfo p {
+  font-size: 0.84rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 0.8em;
+}
+
+body.dark .trendInfo p {
+  color: #a0a0a0;
+}
+
+.trendTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.trendTag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.3em 0.7em;
+  border-radius: 1em;
+  background-color: rgba(15, 52, 96, 0.08);
+  color: #0f3460;
+  letter-spacing: 0.02em;
+}
+
+body.dark .trendTag {
+  background-color: rgba(255, 154, 60, 0.15);
+  color: #ff9a3c;
+}
+
+/* Timeline Section */
+.futureTimeline {
+  padding: 4em 2em;
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.futureTimeline h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2em;
+  color: gray;
+}
+
+.timelineContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timelineContainer::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e07b00, #ff9a3c, #e07b00, transparent);
+}
+
+.timelineItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timelineDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e07b00, #ff9a3c);
+  border: 3px solid var(--bg-secondary);
+  margin-bottom: 1.2em;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 4px rgba(224, 123, 0, 0.2);
+}
+
+.timelineContent {
+  text-align: center;
+  padding: 0 0.8em;
+}
+
+.timelineYear {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #e07b00, #ff9a3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timelineContent h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.3em 0;
+}
+
+.timelineContent p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .futureHero {
+    padding: 3em 2em;
+    gap: 2em;
+  }
+
+  .futureHero h1 {
+    font-size: 2.5rem;
+  }
+
+  .trendsSection h2,
+  .futureTimeline h2 {
+    font-size: 2.2rem;
+  }
+
+  .trendImgWrap {
+    width: 160px;
+    min-height: 160px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .futureHero {
+    flex-direction: column;
+    padding: 3em 1.5em;
+    text-align: center;
+  }
+
+  .futureHero h1 {
+    font-size: 2rem;
+  }
+
+  .futureHero p {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .futureHeroGrid {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .heroGridItem img {
+    height: 100px;
+  }
+
+  .futureStats {
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 2em 1em;
+  }
+
+  .statDivider {
+    display: none;
+  }
+
+  .statItem {
+    width: 40%;
+  }
+
+  .statNumber {
+    font-size: 1.8rem;
+  }
+
+  .trendsSection {
+    padding: 2.5em 1em;
+  }
+
+  .trendsSection h2,
+  .futureTimeline h2 {
+    font-size: 1.8rem;
+  }
+
+  .trendsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .trendCard {
+    flex-direction: column;
+  }
+
+  .trendImgWrap {
+    width: 100%;
+    min-height: 160px;
+    height: 160px;
+  }
+
+  .futureTimeline {
+    padding: 2.5em 1em;
+  }
+
+  .timelineContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+  }
+
+  .timelineContainer::before {
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    right: auto;
+    width: 2px;
+    height: 100%;
+  }
+
+  .timelineItem {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.2em;
+    margin-bottom: 2em;
+  }
+
+  .timelineDot {
+    margin-bottom: 0;
+    margin-top: 0.3em;
+    flex-shrink: 0;
+  }
+
+  .timelineContent {
+    text-align: left;
+    padding: 0;
+  }
+}

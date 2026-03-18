@@ -25,6 +25,7 @@ export default function Header({ darkMode, onToggle }) {
           <li><Link to="/community" onClick={() => setMenuOpen(false)}>Community</Link></li>
           <li><Link to="/whats-new" onClick={() => setMenuOpen(false)}>What's New</Link></li>
           <li><Link to="/support" onClick={() => setMenuOpen(false)}>Support</Link></li>
+          <li><Link to="/future-trends" onClick={() => setMenuOpen(false)}>Future Trends</Link></li>
         </ul>
         <div className="headerRight">
           <div className="themeSwitch">

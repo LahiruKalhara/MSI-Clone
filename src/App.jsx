@@ -7,6 +7,7 @@ import AiotSolutions from './pages/AiotSolutions'
 import Community from './pages/Community'
 import WhatsNew from './pages/WhatsNew'
 import Support from './pages/Support'
+import FutureTrends from './pages/FutureTrends'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/whats-new" element={<WhatsNew />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/future-trends" element={<FutureTrends />} />
       </Routes>
     </BrowserRouter>
   )
