@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import useScrollAnimation from '../hooks/useScrollAnimation'
 import card1 from '../assets/card1.jpeg'
 import card2 from '../assets/card2.jpeg'
 import card3 from '../assets/card3.jpeg'
@@ -19,21 +18,19 @@ const cards = [
 ]
 
 export default function LatestInnovation() {
-  const [ref, isVisible] = useScrollAnimation()
-
   return (
-    <div ref={ref} className={`bodyContainer2${isVisible ? ' opacityon' : ''}`}>
+    <div className="bodyContainer2" data-aos="fade-up">
       <h1>Discover the Latest MSI Innovation</h1>
       <div className="cardContainer">
         {cards.map((card, i) => (
-          <Link to="/products" className="card" key={i}>
+          <Link to="/products" className="card" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
             <img src={card.img} alt={card.name} />
             <h3>{card.name}</h3>
             <p>{card.desc}</p>
           </Link>
         ))}
       </div>
-      <Link to="/products" className="img2">
+      <Link to="/products" className="img2" data-aos="zoom-in" data-aos-delay="200">
         <img src={dss} alt="MSI Showcase" />
       </Link>
     </div>

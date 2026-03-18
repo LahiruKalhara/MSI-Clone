@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BotMessageSquare, Hand, Cog, Radio, Puzzle, Target, Brain, Link, Globe, Landmark } from 'lucide-react'
+import Globe3D from '../components/Globe3D'
 import card1 from '../assets/card1.jpeg'
 import card2 from '../assets/card2.jpeg'
 import card3 from '../assets/card3.jpeg'
@@ -102,13 +103,13 @@ export default function FutureTrends() {
     <div className="futurePage">
       <section className="futureHero">
         <div className="futureHeroContent">
-          <span className="futureBadge">Exploring Tomorrow</span>
-          <h1>Future Trends in MSI</h1>
-          <p>Discover the technologies reshaping Management Information Systems — from intelligent automation to immersive digital experiences</p>
+          <span className="futureBadge" data-aos="fade-down" data-aos-delay="100">Exploring Tomorrow</span>
+          <h1 data-aos="fade-right" data-aos-delay="200">Future Trends in MSI</h1>
+          <p data-aos="fade-right" data-aos-delay="300">Discover the technologies reshaping Management Information Systems — from intelligent automation to immersive digital experiences</p>
         </div>
         <div className="futureHeroGrid">
           {[card1, card2, card3, card4].map((img, i) => (
-            <div className="heroGridItem" key={i} style={{ animationDelay: `${i * 0.15}s` }}>
+            <div className="heroGridItem" key={i} data-aos="zoom-in" data-aos-delay={150 + i * 100}>
               <img src={img} alt="" />
             </div>
           ))}
@@ -116,35 +117,37 @@ export default function FutureTrends() {
       </section>
 
       <section className="futureStats">
-        <div className="statItem">
+        <div className="statItem" data-aos="fade-up" data-aos-delay="0">
           <span className="statNumber">10</span>
           <span className="statLabel">Key Trends</span>
         </div>
         <div className="statDivider"></div>
-        <div className="statItem">
+        <div className="statItem" data-aos="fade-up" data-aos-delay="100">
           <span className="statNumber">2026</span>
           <span className="statLabel">& Beyond</span>
         </div>
         <div className="statDivider"></div>
-        <div className="statItem">
+        <div className="statItem" data-aos="fade-up" data-aos-delay="200">
           <span className="statNumber">AI</span>
           <span className="statLabel">Powered Future</span>
         </div>
         <div className="statDivider"></div>
-        <div className="statItem">
+        <div className="statItem" data-aos="fade-up" data-aos-delay="300">
           <span className="statNumber">360°</span>
           <span className="statLabel">Integration</span>
         </div>
       </section>
 
       <section className="trendsSection">
-        <h2>The 10 Pillars of Next-Gen MIS</h2>
+        <h2 data-aos="fade-up">The 10 Pillars of Next-Gen MIS</h2>
         <div className="trendsGrid">
           {trends.map((trend) => (
             <div
               className={`trendCard${activeTrend === trend.id ? ' expanded' : ''}`}
               key={trend.id}
               onClick={() => setActiveTrend(activeTrend === trend.id ? null : trend.id)}
+              data-aos="fade-up"
+              data-aos-delay={((trend.id - 1) % 2) * 100}
             >
               <div className="trendImgWrap">
                 <img src={trend.img} alt={trend.title} />
@@ -167,89 +170,68 @@ export default function FutureTrends() {
         </div>
       </section>
 
-      <section className="distributionBar">
-        <div className="distContent">
-          <div className="distGlobe">
-            <div className="globeWrapper">
-              <div className="globeSphere">
-                <div className="globeGrid"></div>
-              </div>
-              <div className="globePulse"></div>
-            </div>
+      <section className="globalReachBar">
+        <div className="reachContent">
+          <div className="reachGlobeWrap" data-aos="zoom-in">
+            <Globe3D size={200} />
           </div>
-          <div className="distInfo">
-            <span className="distBadge">Global Distribution</span>
-            <h2>Available Across 45+ Countries</h2>
-            <p>Our future-ready MIS solutions are deployed worldwide, empowering businesses across every continent</p>
-            <div className="distCountries">
-              <div className="distRegion">
-                <h4>Americas</h4>
-                <ul>
-                  <li><span className="distDot americas"></span>United States</li>
-                  <li><span className="distDot americas"></span>Canada</li>
-                  <li><span className="distDot americas"></span>Brazil</li>
-                  <li><span className="distDot americas"></span>Mexico</li>
-                </ul>
-              </div>
-              <div className="distRegion">
-                <h4>Europe</h4>
-                <ul>
-                  <li><span className="distDot europe"></span>Germany</li>
-                  <li><span className="distDot europe"></span>United Kingdom</li>
-                  <li><span className="distDot europe"></span>France</li>
-                  <li><span className="distDot europe"></span>Netherlands</li>
-                </ul>
-              </div>
-              <div className="distRegion">
-                <h4>Asia Pacific</h4>
-                <ul>
-                  <li><span className="distDot asia"></span>Japan</li>
-                  <li><span className="distDot asia"></span>South Korea</li>
-                  <li><span className="distDot asia"></span>Singapore</li>
-                  <li><span className="distDot asia"></span>Australia</li>
-                </ul>
-              </div>
-              <div className="distRegion">
-                <h4>Middle East & Africa</h4>
-                <ul>
-                  <li><span className="distDot mea"></span>UAE</li>
-                  <li><span className="distDot mea"></span>Saudi Arabia</li>
-                  <li><span className="distDot mea"></span>South Africa</li>
-                  <li><span className="distDot mea"></span>Israel</li>
-                </ul>
-              </div>
+          <div className="reachInfo" data-aos="fade-left" data-aos-delay="200">
+            <span className="reachBadge">Global Reach</span>
+            <h3>Deployed Across 45+ Countries Worldwide</h3>
+            <p>Pioneering next-gen MIS solutions across every continent with 24/7 enterprise support</p>
+          </div>
+          <div className="reachStats" data-aos="fade-left" data-aos-delay="300">
+            <div className="reachStat">
+              <strong>45+</strong>
+              <span>Countries</span>
             </div>
-            <div className="distStats">
-              <div className="distStat">
-                <strong>45+</strong><span>Countries</span>
-              </div>
-              <div className="distStat">
-                <strong>120+</strong><span>Partners</span>
-              </div>
-              <div className="distStat">
-                <strong>6</strong><span>Continents</span>
-              </div>
-              <div className="distStat">
-                <strong>24/7</strong><span>Support</span>
-              </div>
+            <div className="reachStatDivider"></div>
+            <div className="reachStat">
+              <strong>120+</strong>
+              <span>Partners</span>
+            </div>
+            <div className="reachStatDivider"></div>
+            <div className="reachStat">
+              <strong>6</strong>
+              <span>Continents</span>
+            </div>
+            <div className="reachStatDivider"></div>
+            <div className="reachStat">
+              <strong>24/7</strong>
+              <span>Support</span>
             </div>
           </div>
         </div>
       </section>
 
       <section className="futureTimeline">
-        <h2>Evolution Roadmap</h2>
+        <div className="tlHeader" data-aos="fade-up">
+          <span className="tlBadge">Roadmap</span>
+          <h2>Evolution Roadmap</h2>
+          <p className="tlSubtitle">Tracing the journey from early AI adoption to full digital convergence</p>
+        </div>
         <div className="timelineContainer">
+          <div className="tlLine"></div>
           {[
-            { year: '2024', label: 'Foundation', desc: 'AI integration begins across core MIS platforms' },
-            { year: '2025', label: 'Acceleration', desc: 'Multi-agent systems and edge computing go mainstream' },
-            { year: '2026', label: 'Transformation', desc: 'Digital employees and hyper-personalization become standard' },
-            { year: '2027+', label: 'Convergence', desc: 'Full physical-digital AI convergence with metaverse workspaces' },
+            { year: '2024', label: 'Foundation', desc: 'AI integration begins across core MIS platforms with initial automation of workflows and data pipelines.', status: 'done' },
+            { year: '2025', label: 'Acceleration', desc: 'Multi-agent systems and edge computing go mainstream, enabling real-time distributed intelligence.', status: 'done' },
+            { year: '2026', label: 'Transformation', desc: 'Digital employees and hyper-personalization become standard across enterprise ecosystems.', status: 'active' },
+            { year: '2027+', label: 'Convergence', desc: 'Full physical-digital AI convergence with metaverse workspaces and autonomous governance.', status: 'upcoming' },
           ].map((item, i) => (
-            <div className="timelineItem" key={i}>
-              <div className="timelineDot"></div>
-              <div className="timelineContent">
-                <span className="timelineYear">{item.year}</span>
+            <div className={`tlItem tlItem--${item.status}`} key={i} data-aos="fade-right" data-aos-delay={i * 150}>
+              <div className="tlDotWrap">
+                <div className="tlDot">
+                  {item.status === 'done' && <span className="tlCheck">&#10003;</span>}
+                  {item.status === 'active' && <span className="tlPulse"></span>}
+                </div>
+              </div>
+              <div className="tlCard">
+                <div className="tlCardInner">
+                  <span className="tlYear">{item.year}</span>
+                  <span className={`tlStatus tlStatus--${item.status}`}>
+                    {item.status === 'done' ? 'Completed' : item.status === 'active' ? 'In Progress' : 'Upcoming'}
+                  </span>
+                </div>
                 <h4>{item.label}</h4>
                 <p>{item.desc}</p>
               </div>

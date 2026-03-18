@@ -1,16 +1,6 @@
 .bodyContainer2 {
   text-align: center;
   margin-top: 3em;
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(10%);
-  transition: all 1s;
-}
-
-.bodyContainer2.opacityon {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
 }
 
 .bodyContainer2 .cardContainer {

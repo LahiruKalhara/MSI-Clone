@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Products from './pages/Products'
@@ -11,6 +13,10 @@ import FutureTrends from './pages/FutureTrends'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, easing: 'ease-out' })
+  }, [])
 
   useEffect(() => {
     document.body.classList.toggle('dark', darkMode)

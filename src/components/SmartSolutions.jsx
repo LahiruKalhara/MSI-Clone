@@ -1,4 +1,3 @@
-import useScrollAnimation from '../hooks/useScrollAnimation'
 import evCharger from '../assets/ev charger.png'
 import evCharger2 from '../assets/ev charger2.png'
 import evCharger3 from '../assets/ev charger3.png'
@@ -19,14 +18,12 @@ const categories = [
 ]
 
 export default function SmartSolutions() {
-  const [ref, isVisible] = useScrollAnimation()
-
   return (
-    <div ref={ref} className={`bodyContainer4${isVisible ? ' opacityon' : ''}`}>
+    <div className="bodyContainer4" data-aos="fade-up">
       <h1>The Future of Smart</h1>
       <div className="cardContainer">
         {categories.map((cat, i) => (
-          <div className="card" key={i}>
+          <div className="card" key={i} data-aos="zoom-in" data-aos-delay={i * 80}>
             <img src={cat.img} alt={typeof cat.title === 'string' ? cat.title : `Category ${i + 1}`} />
             <h3>{cat.title}</h3>
           </div>

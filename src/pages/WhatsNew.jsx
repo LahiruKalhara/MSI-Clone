@@ -34,11 +34,11 @@ export default function WhatsNew() {
   return (
     <div className="whatsNewPage">
       <div className="whatsNewHero">
-        <h1>What's New</h1>
-        <p>Latest news, product launches, and stories from MSI</p>
+        <h1 data-aos="fade-down">What's New</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Latest news, product launches, and stories from MSI</p>
       </div>
 
-      <section className="heroArticle">
+      <section className="heroArticle" data-aos="fade-up">
         {latestNews.map((news, i) => (
           <div className="heroArticleCard" key={i}>
             <img src={news.img} alt={news.title} />
@@ -53,10 +53,10 @@ export default function WhatsNew() {
       </section>
 
       <section className="articlesSection">
-        <h2>Latest Articles</h2>
+        <h2 data-aos="fade-up">Latest Articles</h2>
         <div className="articlesGrid">
           {articles.map((article, i) => (
-            <div className="articleCard" key={i}>
+            <div className="articleCard" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
               <div className="articleImgWrap">
                 <img src={article.img} alt={article.title} />
                 <span className="articleTag">{article.tag}</span>
@@ -72,10 +72,10 @@ export default function WhatsNew() {
       </section>
 
       <section className="pressSection">
-        <h2>Press Releases</h2>
+        <h2 data-aos="fade-up">Press Releases</h2>
         <div className="pressList">
           {pressReleases.map((pr, i) => (
-            <div className="pressItem" key={i}>
+            <div className="pressItem" key={i} data-aos="fade-left" data-aos-delay={i * 80}>
               <span className="pressDate">{pr.date}</span>
               <h3>{pr.title}</h3>
             </div>
